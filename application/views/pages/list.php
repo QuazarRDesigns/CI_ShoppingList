@@ -25,7 +25,7 @@
                 <?php if ($complete_query): ?>
                     <?php foreach ($complete_query->result_array() as $complete_row): ?>
                         <?php if ($todo->id === $complete_row['id']): ?>
-                <li class="collection-item"><?= anchor('todos/uncomplete/' . $todo->id, '<i class="grey-text material-icons">check_circle</i>');?>    <span class="complete"><?= $todo->item; ?></span><?= anchor('todos/delete/' . $todo->id, '<i class="right grey-text material-icons">delete</i>'); ?><?= anchor('todos/add_edit/' . $todo->id, '<i class="grey-text material-icons right">edit</i>'); ?></li>
+                <li class="collection-item"><?= anchor('todos/uncomplete/' . $todo->id, '<i class="red-text text-lighten-2 material-icons">cancel</i>');?>    <span class="complete"><?= $todo->item; ?></span><?= anchor('todos/delete/' . $todo->id, '<i class="right grey-text material-icons">delete</i>'); ?><?= anchor('todos/add_edit/' . $todo->id, '<i class="grey-text material-icons right">edit</i>'); ?></li>
                         <?php endif ?>
                     <?php endforeach; ?>
                 <?php endif ?>
@@ -42,7 +42,7 @@
                             
                                    <?php // echo form_checkbox($checkdata, $checkjs['onClick']); ?>
                               <!--<label for="check">--> 
-                               <?= anchor('todos/complete/' . $todo->id, '<i class="grey-text material-icons">check</i>');?>  <span class="pending"><?= $todo->item; ?></span>
+                               <?= anchor('todos/complete/' . $todo->id, '<i class="green-text text-lighten-2 material-icons">check_circle</i>');?>  <span class="pending"><?= $todo->item; ?></span>
                               <!--</label>-->
                                     <?= anchor('todos/delete/' . $todo->id, '<i class="grey-text material-icons right">delete</i>'); ?><?= anchor('todos/add_edit/' . $todo->id, '<i class="grey-text material-icons right">edit</i>'); ?> </li>
                        

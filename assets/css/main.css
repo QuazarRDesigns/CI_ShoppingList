@@ -122,3 +122,7 @@ div.btn-floating.btn {
 .material-icons {
     font-size: 20px;
 }
+
+.pending, .complete {
+    vertical-align: top;
+}
